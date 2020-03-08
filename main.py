@@ -22,7 +22,7 @@ def get_pig_latin_url(text):
     request = requests.post(pig_latin_post_url,
                             data = {'input_text':text},
                             allow_redirects=False)
-    return request.url
+    return request.text
 
 
 @app.route('/')
