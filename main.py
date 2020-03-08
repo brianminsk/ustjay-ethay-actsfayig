@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 app = Flask(__name__)
 
 pig_latin_post_url = "https://hidden-journey-62459.herokuapp.com/piglatinize/"
-my_heroku_app_url = "https://peaceful-journey-72644.herokuapp.com"
+# my_heroku_app_url = "https://peaceful-journey-72644.herokuapp.com"
 
 def get_fact():
 
@@ -22,7 +22,7 @@ def get_fact():
 def get_pig_latin_url(text):
     response_text = get_pig_latin_response_text(text)
     end_of_url = extract_end_of_url(response_text)
-    return my_heroku_app_url + end_of_url
+    return pig_latin_post_url + end_of_url
 
 
 def get_pig_latin_response_text(text):
